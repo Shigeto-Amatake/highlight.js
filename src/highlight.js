@@ -772,7 +772,8 @@ const HLJS = function(hljs) {
     node = element;
     const text = node.textContent;
     const result = language ? highlight(text, { language, ignoreIllegals: true }) : highlightAuto(text);
-
+console.log("text",text);
+console.log("result",result.value);
     element.innerHTML = result.value;
     element.dataset.highlighted = "yes";
     updateClassName(element, language, result.language);
